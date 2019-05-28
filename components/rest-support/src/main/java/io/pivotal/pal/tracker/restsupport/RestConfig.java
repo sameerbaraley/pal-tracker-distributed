@@ -11,12 +11,12 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class RestConfig {
-
-    @LoadBalanced
+    //Remove the RestOperations bean from the RestConfig class since it is now configured in each application configuration.
+    /*@LoadBalanced
     @Bean
     public RestOperations restOperations() {
         return new RestTemplate();
-    }
+    }*/
 
     @Bean
     public ObjectMapper objectMapper() {
